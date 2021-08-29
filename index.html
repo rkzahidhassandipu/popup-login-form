@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Popup</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2>Popup Form</h2>
+	<p>Click on the button at the bottom of this page to open the login form.</p>
+	<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>	
+
+	<button class="open-popup" onclick="openForm()">Open Form</button>
+
+	<div class="form-popup" id="myform">
+		<form action="/action_page.php" class="form-container">
+			<h1>Login</h1>
+
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email">
+
+			<label for="pse"><b>password</b></label>
+			<input type="password" placeholder="password">
+
+			<input type="submit" class="btn" value="Login">
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+	</div>
+
+	<script>
+		function openForm(){
+			document.getElementById('myform').style.display = 'block';
+		}
+		function closeForm(){
+			document.getElementById('myform').style.display = 'none';
+		}
+	</script>
+</body>
+</html>
